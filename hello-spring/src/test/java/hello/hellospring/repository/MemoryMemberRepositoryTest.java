@@ -15,7 +15,7 @@ class MemoryMemberRepositoryTest {
     MemoryMemberRepository repository = new MemoryMemberRepository();
 
     @AfterEach
-    public void afterEach() {
+    public void afterEach() { // 메서드 각각 끝날때마다 실행 됨
         repository.clearStore();
     }
 
