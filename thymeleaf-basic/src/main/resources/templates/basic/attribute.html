@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>속성 설정</h1>
+<input type="text" name="mock" th:name="userA" />
+<h1>속성 추가</h1>
+- th:attrappend = <input type="text" class="text" th:attrappend="class='large'" /><br/>
+- th:attrprepend = <input type="text" class="text" th:attrprepend="class='large'" /><br/>
+<!-- classappend 주로 사용(띄어 쓰기 같은거 신경 안 써도 되니까) -->
+- th:classappend = <input type="text" class="text" th:classappend="large" /><br/>
+<h1>checked 처리</h1>
+<!-- model.addAttribute("checked1", true); / th:checked="true" -->
+- checked o <input type="checkbox" name="active" th:checked=${checked1} /><br/>
+<!-- model.addAttribute("checked2", false); / th:checked="false"  -->
+- checked x <input type="checkbox" name="active" th:checked=${checked2} /><br/>
+- checked=false <input type="checkbox" name="active" checked="false" /><br/>
+</body>
+</html>
